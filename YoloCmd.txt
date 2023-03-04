@@ -1,0 +1,19 @@
+python train.py --img 416 --batch 16 --epochs 100 --data Mort-Darknet-1/data.yaml --cfg ./models/custom_yolov5s.yaml --weights '' --name yolov5s_results  --cache
+
+python detect.py --source fishy.jpg --weights runs\train\yolov5s_results2\weights\best.pt --conf-thres 0.65 --iou-thres 0.5
+
+python detect.py --source 0 --weights runs\train\yolov5s_results\weights\best.pt --conf-thres 0.65 --iou-thres 0.5
+
+fish_practice_video_12(Original).mp4
+
+python detect.py --source fishy.jpg --weights runs\train\yolov5s_results\weights\best.pt --conf-thres 0.65 --iou-thres 0.5
+
+python detect.py --source fishy(2).jpg --weights runs\train\yolov5s_results2\weights\best.pt
+
+python detect.py --source fish_practice_video_12(Original).mp4 --weights runs\train\yolov5s_results\weights\best.pt --conf-thres 0.65 --iou-thres 0.5
+
+
+
+
+
+
